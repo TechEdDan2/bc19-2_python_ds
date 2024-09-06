@@ -19,3 +19,12 @@ def partition(lst, fn):
         >>> partition(["hi", None, 6, "bye"], is_string)
         [['hi', 'bye'], [None, 6]]
     """
+    pased_test = []
+    failed_test = []
+
+    for val in lst:
+        if fn(val):
+            pased_test.append(val)
+        else:
+            failed_test.append(val)
+    return [pased_test, failed_test]
