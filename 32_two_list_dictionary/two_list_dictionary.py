@@ -15,3 +15,11 @@ def two_list_dictionary(keys, values):
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
    """
+    my_dictionary = {}
+
+    # Syntax: enumerate(iterable, start=0)
+    # Return: Returns an iterator with index and element pairs from the original iterable
+    for index, item in enumerate(keys):
+        my_dictionary[item] = values[index] if index < len(values) else None
+
+    return my_dictionary
