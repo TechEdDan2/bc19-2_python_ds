@@ -29,3 +29,9 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+    # The ord() function returns the number representing the unicode code of a specified character.
+    total = 0
+    for char in word:
+        total += ord(char)
+    
+    return (total % 2 == 1) 
